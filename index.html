@@ -4,10 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel & Mayra</title>
+    <link rel="stylesheet" href="./mobil.css">
+    <!-- fuentes google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- para usar animaciones con lottie creator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <section class="load">
-        hello words
+<body class="body-sin-scroll">
+    <section class="modalLoad" id="modalLoad">
+        <p>Hola, espérame unos segundos mientras preparo tu invitación</p>
+        <lottie-player class="gifs_lotties"
+            src="./assets/gifs/heart_load.json"
+            background="transparent"
+            speed="0.6"
+            style="width: 100px; height: 100px;"
+            loop
+            autoplay>
+        </lottie-player>
     </section>
+    <!-- Modal de inicio -->
+    <section id="modalInicio" class="modalInicio">
+        <div class="modalContenidoInicio">
+            <img class="flores" src="./assets/fotos/flores_sinFondo.webp" alt="arreglo floral">
+            <!-- <span class="cerrar" onclick="cerrarModal()">&times;</span> -->
+            <div class="contenedorBienvenidos">
+                <p class="titulo">Bienvenidos a la invitación de</p>
+                <P class="tituloNombres">Daniel</P>
+                <P class="tituloNombres">y</P>
+                <P class="tituloNombres">Mayra</P>
+            </div>
+        <div class="contenedor2Bienvenida">
+            <p>¿Quieres escuchar nuestra canción mientras recorres la invitación?</p>
+            <button class="btnIngresarConMusica" onclick="cerrarModalConMusica()">Ingresar con canción</button>
+            <button onclick="cerrarModal()">ingresar sin canción</button>
+        </div>
+        </div>
+    </section>
+    <!-- fin modal inicio -->
+    <header>
+        <!-- Botón flotante para reproducir/pausar la canción -->
+       <div id="botonMusica" class="boton-flotante" onclick="toggleReproducirPausar()">
+           <img src="./assets/iconos/musica.png" alt="Audio">
+       </div>
+
+       
+       <audio id="cancion" src="./assets/audio/audio.weba"></audio>
+   </header>
+
+   <main class="contenedorMain">
+    <section class="sectionMainPortada">
+        
+    </section>
+    <section class="contenedorTop">
+        <div class="curvo">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" fill="#ffffff" ></path>
+            </svg>
+        </div>
+        <div class="rose-corner top-left"></div>
+        <div class="rose-corner top-right"></div>
+        <div class="divFechaInicialesNombres">
+            <p>21.12.2024</p>
+            <p>A<span>&</span>P</p>
+            <p>ALEJANDRO & PAMELA</p>
+        </div>
+        <div class="divGotaFraseGif">
+            <!-- <img src="./assets/bordes_modal_inicial/adorno_gota.svg" alt="gota"> -->
+            <p>En nuestro amor, veo la mano de Dios uniendo nuestros corazones para siempre.</p>
+            <!-- <img src="" alt=""> -->
+            
+        </div>
+    </section>
+   </main>
+    <script src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,247 @@
+:root{
+    --colorFondo:#540b17;
+   --colorSubtitulo: #B27E49; 
+   --color-Titulo: #E4C4A1;/*color de botones*/
+   --color-Blanco: #ffffff;/*fuente2*/
+   --color-Button_texto: #C8A783;/*tarjetas*/ 
+ 
+   --breakpoint-xs: 0;
+   --breakpoint-sm: 576px;
+   --breakpoint-md: 768px;
+   --breakpoint-lg: 992px;
+   --breakpoint-xl: 1200px;
+ 
+   --fuente1: "Open Sans", sans-serif;
+   --fuente2: "Fraunces", serif;
+ 
+ 
+ }
+ *{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ html{
+   font-size: 62.5%;
+   font-family: var(--fuente1)
+ }
+ body{
+ background-color: var(--colorFondo);
+ }
+/* Modal load */
+ .modalLoad{
+    position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: var(--color-pallete-6);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          z-index: 999;
+  }
+  .modalLoad p{
+    padding: 10px 50px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-Button_texto);
+  }
+  .modalLoad .corazon_carga_lotties{
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+  }
+
+  /* Estilos para el modal CARATULA*/
+.modalInicio {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 100%; /* Ancho del 100% de la ventana */
+    height: 100vh; /* Alto del 100% de la ventana */
+    background-color: var(--colorFondo);
+    z-index: 1000;
+  }
+  .modalContenidoInicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 999;
+  }
+  .modalContenidoInicio .flores{
+    width: 200px;
+  }
+  /* Estilos para deshabilitar el desplazamiento del cuerpo */
+.body-sin-scroll {
+    overflow: hidden;
+  }
+  /* boton musica */
+  .boton-flotante {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-pallete-2);
+    opacity: 60%;
+    border-radius: 100%;
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000; /* Asegura que el botón esté sobre otros elementos */
+    /*para el efecto de borde*/
+    box-shadow: 8px 9px 28px black;
+    overflow: hidden;
+    }  
+    .boton-flotante::before{
+      content: "";
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-image: conic-gradient(rgb(121, 84, 84) 20deg, transparent 120deg);
+      animation: rotar 2s linear infinite;
+    }
+    @keyframes rotar{
+      from{
+        transform: rotate(0deg);
+      }
+      to{
+        transform: rotate(-360deg);
+      }
+    }
+    .boton-flotante::after{
+      content: "";
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      background-color: var(--color-pallete-2);
+      border-radius: 100%;
+    
+    }
+    .boton-flotante img{
+      width: 35px;
+      z-index: 3;
+    }
+  /* boton musica fin */
+  .contenedorBienvenidos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedorBienvenidos .titulo{
+    font-size: 2.1rem;
+    color: var(--colorSubtitulo);
+    margin-bottom: 2rem;
+  }
+  .contenedorBienvenidos .tituloNombres{
+    font-size: 4rem;
+    font-family: var(--fuente2);
+    color: var(--color-Titulo);
+    font-weight: 800;
+  }
+  .contenedor2Bienvenida{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 30px;
+  }
+  .contenedor2Bienvenida p{
+    font-size: 1.6rem;
+    color: var(--colorSubtitulo);
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .contenedor2Bienvenida .btnIngresarConMusica{
+    margin-bottom: 20px;
+  }
+  .contenedor2Bienvenida button{
+    width: 230px;
+    height: 40px;
+    background-color: var(--color-Button_texto);
+    border: none;
+    border-radius: 10px;
+    color: var(--color-Blanco);
+    font-weight: 500;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .contenedor2Bienvenida button:hover{
+    background-color: var(--colorSubtitulo);
+  }
+
+  /* contenedor Main */
+  .contenedorMain{
+    width: 100%;
+    height: auto;
+    background-color: var(--color-pallete-6);
+  }
+  .contenedorMain .sectionMainPortada{
+    background-image: url('./assets/fotos/pareja_portada.webp'); /* Reemplaza 'tu-imagen.jpg' con el nombre de tu imagen */
+    height: 100vh; /* Altura de la imagen parallax */
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(1);
+    transition: transform 0.5s ease-out; /* Transición suave para el zoom */
+  }
+  .contenedorMain .contenedorTop{
+    position: relative;
+    background-color: #ce2222;
+    padding: 0 50px;
+    min-height: 150vh; /* Para asegurar que haya suficiente contenido para hacer scroll */
+  }
+  .contenedorTop .curvo {
+    position: absolute;
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    background-color: transparent; /* Asegúrate de que el fondo sea transparente */
+    top: -35px;
+    left: 0;
+}
+.rose-corner {
+    position: absolute;
+    width: 120px; /* Ajusta el tamaño según sea necesario */
+    height: 120px; /* Ajusta el tamaño según sea necesario */
+   
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.top-left {
+    top: -60px;
+    left: -30px;
+   
+}
+
+.top-right {
+    top: -45px;
+    right: -30px;
+    background-image: url('./assets/fotos/rosa.png'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
+}
+
+  /* fin contenedor Main */
+  
+  
+
+
+
+
+
