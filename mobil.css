@@ -213,7 +213,7 @@
     position: absolute;
     width: 100%; /* Ajusta el tamaño según sea necesario */
     background-color: transparent; /* Asegúrate de que el fondo sea transparente */
-    top: -35px;
+    top: -31px;
     left: 0;
 }
 .rose-corner {
