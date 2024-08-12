@@ -79,7 +79,7 @@
     z-index: 999;
   }
   .modalContenidoInicio .flores{
-    width: 200px;
+    width: 150px;
   }
   /* Estilos para deshabilitar el desplazamiento del cuerpo */
 .body-sin-scroll {
@@ -209,6 +209,7 @@
     min-height: 150vh; /* Para asegurar que haya suficiente contenido para hacer scroll */
     z-index: 10;
   }
+
   .contenedorTop .curvo {
     position: absolute;
     width: 100%; /* Ajusta el tamaño según sea necesario */
@@ -237,7 +238,50 @@
     right: 0px;
     background-image: url('./assets/fotos/flores_sinFondo.webp'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
 }
-
+.contenedorTop .divfechaNombresFrase{
+  width: 100%;
+  padding-top: 60px;
+  text-align: center;
+}
+.contenedorTop .divfechaNombresFrase .fechaPrincipal{
+  font-family: var(--fuente2);
+  font-size: 2.5rem;
+  color: var(--color-Titulo);
+  font-weight: 700;
+  border: 1px solid var(--color-Blanco);
+  display: inline-block;
+  padding: 5px 30px; 
+  margin-bottom: 35px;
+}
+.contenedorTop .divfechaNombresFrase .nombre{
+  font-family: var(--fuente2);
+  font-size: 7rem;
+  color: var(--color-Titulo);
+  font-weight: 700;
+}
+.contenedorTop .divfechaNombresFrase .gato{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.gato .linea{
+  width: 30%;
+  border-top: 1px solid var(--color-Blanco);
+}
+.gato .ampersand{
+  font-size: 5rem;
+  color: var(--color-Blanco);
+  font-weight: 100;
+  border: 1px solid var(--colorSubtitulo);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.contenedorTop .divfechaNombresFrase .frase{
+  font-size: 2rem;
+  color: var(--color-Button_texto);
+  margin-top: 50px;
+}
   /* fin contenedor Main */
   
   
