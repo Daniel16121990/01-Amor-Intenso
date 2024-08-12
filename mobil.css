@@ -205,9 +205,9 @@
   }
   .contenedorMain .contenedorTop{
     position: relative;
-    background-color: #ce2222;
     padding: 0 50px;
     min-height: 150vh; /* Para asegurar que haya suficiente contenido para hacer scroll */
+    z-index: 10;
   }
   .contenedorTop .curvo {
     position: absolute;
@@ -220,21 +220,22 @@
     position: absolute;
     width: 120px; /* Ajusta el tamaño según sea necesario */
     height: 120px; /* Ajusta el tamaño según sea necesario */
-   
+    z-index: 500;
     background-size: contain;
     background-repeat: no-repeat;
+    overflow-x: hidden;
+    
 }
 
 .top-left {
     top: -60px;
     left: -30px;
-   
 }
 
 .top-right {
-    top: -45px;
-    right: -30px;
-    background-image: url('./assets/fotos/rosa.png'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
+    top: -70px;
+    right: 0px;
+    background-image: url('./assets/fotos/flores_sinFondo.webp'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
 }
 
   /* fin contenedor Main */
