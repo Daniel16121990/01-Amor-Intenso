@@ -1,5 +1,6 @@
 :root{
     --colorFondo:#540b17;
+    --colorOscuro: #33040d;
    --colorSubtitulo: #B27E49; 
    --color-Titulo: #E4C4A1;/*color de botones*/
    --color-Blanco: #ffffff;/*fuente2*/
@@ -206,7 +207,7 @@
   .contenedorMain .contenedorTop{
     position: relative;
     padding: 0 50px;
-    min-height: 150vh; /* Para asegurar que haya suficiente contenido para hacer scroll */
+    height: auto; /* Para asegurar que haya suficiente contenido para hacer scroll */
     z-index: 10;
   }
 
@@ -283,6 +284,104 @@
   margin-top: 50px;
 }
   /* fin contenedor Main */
+
+  /* section contador */
+  .sectionContador{
+    width: 100%;
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 80px;
+  }
+  .sectionContador .contadorCirculos{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 1px solid var(--colorSubtitulo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+  .sectionContador .contadorCirculos .contadorReloj{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: var(--colorOscuro);
+    border-radius: 50%;
+    position: relative;
+  }
+  .sectionContador .contadorCirculos .contadorReloj .rosaReloj{
+    top: -57px;
+    left: -39px;
+    background-image: url('./assets/fotos/flores_sinFondo.webp'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
+
+    position: absolute;
+    width: 120px; /* Ajusta el tamaño según sea necesario */
+    height: 120px; /* Ajusta el tamaño según sea necesario */
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+  .sectionContador .contadorCirculos .contadorReloj p{
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-family: var(--fuente2);
+    color: var(--color-Titulo);
+  }
+  .sectionContador .contadorCirculos .contadorReloj .reloj{
+    display: flex;
+  }
+  .sectionContador .reloj .reloj-col{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: var(--colorSubtitulo);
+    text-align: center;
+    border-right: 1px solid var(--color-Titulo);
+    padding: 0 8px;
+  }
+  .sectionContador .reloj .no-border{
+    border-right: none;
+  }
+  .sectionContador .reloj .reloj-col .number{
+    font-size: 2rem;
+    color: var(--colorSubtitulo);
+    font-family: var(--fuente2);
+    font-weight: 700;
+  }
+  .sectionContador .reloj .reloj-col .time{
+    font-size: 1.6rem;
+    color: var(--color-Titulo);
+    font-weight: 100;
+  }
+  .sectionContador #dias{
+    /* border-left: 1px solid var(--color-Titulo); */
+    margin: 20px 0;
+  }
+  @keyframes palpitacion {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.4); }
+    100% { transform: scale(1); }
+  }
+  
+  .sectionContador svg.corazon {
+    animation: palpitacion 3s infinite;
+    transform-origin: center;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+  }
+ 
+  /* fin seccion contador */
   
   
 

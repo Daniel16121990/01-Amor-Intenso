@@ -40,3 +40,34 @@ window.addEventListener('scroll', function() {
     parallax.style.backgroundPosition = `center ${backgroundPositionY}px`;
 });
 //***************fin parallax*************/
+
+//***************cuenta regresiva----------
+var fechaObjetivo = new Date('2024-12-21:10:00'); //año/mes/dia
+
+    function actualizarCuentaRegresiva() {
+        var ahora = new Date().getTime();
+        var diferencia = fechaObjetivo - ahora;
+
+        if (diferencia <= 0) {
+            // Detener la cuenta regresiva
+            clearInterval(intervalo);
+            // Mostrar el mensaje de llegada
+            document.getElementById('reloj').innerHTML = '<span>Llegó el día!</span>';
+            return;
+        }
+
+        var dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        var horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        var segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById('dias_numero').innerText = dias;
+        document.getElementById('horas_numero').innerText = horas;
+        document.getElementById('minutos_numero').innerText = minutos;
+        document.getElementById('segundos_numero').innerText = segundos;
+    }
+
+    var intervalo = setInterval(actualizarCuentaRegresiva, 1000);
+
+    actualizarCuentaRegresiva(); // Llamar una vez para evitar el retraso inicial
+//**************fin cuenta regresiva***** *
