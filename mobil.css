@@ -1,21 +1,21 @@
 :root{
     --colorFondo:#540b17;
     --colorOscuro: #33040d;
-   --colorSubtitulo: #B27E49; 
+   --colorSubtitulo: #B27E49;
    --color-Titulo: #E4C4A1;/*color de botones*/
    --color-Blanco: #ffffff;/*fuente2*/
-   --color-Button_texto: #C8A783;/*tarjetas*/ 
- 
+   --color-Button_texto: #C8A783;/*tarjetas*/
+
    --breakpoint-xs: 0;
    --breakpoint-sm: 576px;
    --breakpoint-md: 768px;
    --breakpoint-lg: 992px;
    --breakpoint-xl: 1200px;
- 
+
    --fuente1: "Open Sans", sans-serif;
    --fuente2: "Fraunces", serif;
- 
- 
+
+
  }
  *{
    margin: 0;
@@ -104,7 +104,7 @@
     /*para el efecto de borde*/
     box-shadow: 8px 9px 28px black;
     overflow: hidden;
-    }  
+    }
     .boton-flotante::before{
       content: "";
       position: absolute;
@@ -128,7 +128,7 @@
       height: 36px;
       background-color: var(--color-pallete-2);
       border-radius: 100%;
-    
+
     }
     .boton-flotante img{
       width: 35px;
@@ -226,7 +226,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     overflow-x: hidden;
-    
+
 }
 
 .top-left {
@@ -251,7 +251,7 @@
   font-weight: 700;
   border: 1px solid var(--color-Blanco);
   display: inline-block;
-  padding: 5px 30px; 
+  padding: 5px 30px;
   margin-bottom: 35px;
 }
 .contenedorTop .divfechaNombresFrase .nombre{
@@ -292,18 +292,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     margin-top: 80px;
   }
   .sectionContador .contadorCirculos{
     width: 280px;
     height: 280px;
-    border-radius: 50%;
-    border: 1px solid var(--colorSubtitulo);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
+    background-image: url('./assets/bordes_modal_inicial/Circulos.svg');
+    background-repeat: no-repeat;
   }
   .sectionContador .contadorCirculos .contadorReloj{
     width: 80%;
@@ -311,7 +311,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     background-color: var(--colorOscuro);
     border-radius: 50%;
     position: relative;
@@ -371,7 +371,7 @@
     50% { transform: scale(1.4); }
     100% { transform: scale(1); }
   }
-  
+
   .sectionContador svg.corazon {
     animation: palpitacion 3s infinite;
     transform-origin: center;
@@ -380,10 +380,71 @@
     width: 35px;
     height: 35px;
   }
- 
+
   /* fin seccion contador */
-  
-  
+
+  /* SECCION PADRES */
+  .contenedorMain .section_bendicion{
+    width: 100%;
+    margin: 50px auto;
+    background-color: var(--color-pallete-5);
+    box-shadow: 0px -5px 20px -8px rgba(0,0,0,0.75), /* sombreado superior */
+              0px 5px 10px -5px rgba(0,0,0,0.75); /* sombreado inferior */
+  }
+  .contenedorMain .section_bendicion .titulo_bendicion{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contenedorMain .section_bendicion .titulo_bendicion p{
+    font-family: var(--fuente2);
+    color: var(--color-Titulo);
+    font-size: 2.8rem;
+    padding-top: 20px;
+    font-weight: 500;
+  }
+  .contenedorMain .section_bendicion .div_bendicion{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-pallete-5);
+    user-select: none;
+  }
+  .contenedorMain .section_bendicion .div_bendicion .item{
+
+    display: flex;
+       flex-direction: column;
+       align-items: center;
+       min-width: 190px;
+       text-align: center;
+       margin-bottom: 20px;
+       padding: 10px;
+       box-sizing: border-box;
+
+   }
+   .contenedorMain .section_bendicion .div_bendicion .item img{
+    width: 130px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    margin-top: 10px;
+    pointer-events: none; /* Desactiva los eventos del mouse en la imagen */
+    border-radius: 50%;
+
+  }
+  .contenedorMain .section_bendicion .div_bendicion .item .texto_bendicion_titulo{
+    margin: 0;
+    color: var(--colorSubtitulo);
+    font-weight: 500;
+    font-family: var(--fuente2);
+    font-size: 1.7rem; /* Ajusta el tamaño del texto según sea necesario */
+  }
+  .contenedorMain .section_bendicion .div_bendicion .item .texto_bendicion{
+    margin: 0;
+    color: var(--color-Titulo);
+    font-weight: 300;
+    font-family: var(--fuente1);
+    font-size: 1.4rem; /* Ajusta el tamaño del texto según sea necesario */
+  }
+  /* FIN SECCION PADRES */
+
 
 
 
