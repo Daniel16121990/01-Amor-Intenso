@@ -383,7 +383,7 @@
 
   /* fin seccion contador */
 
-  /* SECCION PADRES */
+  /* SECCION PADRES  MISMOS ESTILOS PARA SECCION PADRINOS*/
   .contenedorMain .section_bendicion{
     width: 100%;
     margin: 50px auto;
@@ -398,8 +398,8 @@
   .contenedorMain .section_bendicion .titulo_bendicion p{
     font-family: var(--fuente2);
     color: var(--color-Titulo);
-    font-size: 2.8rem;
-    padding-top: 20px;
+    font-size: 4rem;
+    padding: 20px 10px 0 10px;
     font-weight: 500;
   }
   .contenedorMain .section_bendicion .div_bendicion{
@@ -443,7 +443,86 @@
     font-family: var(--fuente1);
     font-size: 1.4rem; /* Ajusta el tamaño del texto según sea necesario */
   }
-  /* FIN SECCION PADRES */
+  /* FIN SECCION PADRES MISMOS ESTILOS PARA SECCION PADRINOS*/
+
+  /* seccion evento */
+  .sectionEvento{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .sectionEvento .eventoTitulo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  .sectionEvento .eventoTitulo p{
+    font-size: 4rem;
+    font-family: var(--fuente2);
+    font-weight: 500;
+    color: var(--color-Titulo);
+    margin: 20px 0;
+  }
+  .sectionEvento .eventoDireccion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  /* .sectionEvento .eventoDireccion .imagen{
+    width: 100%;
+    height: 250px;
+    background-image: url('./assets/fotos/Catedral_Metropolitana_de_La_Paz.jpg');
+    background-size: cover;
+  } */
+  .sectionEvento .eventoDireccion .eventoInformacion{
+    position: relative;
+    width: 90%;  /* Ajusta el tamaño según tus necesidades */
+    height: 450px;
+    background-image: 
+      linear-gradient(to right, rgba(51, 4, 13, 100), rgba(51, 4, 13, 0.7) 90%), /* Degradado de izquierda a derecha */
+      url('./assets/fotos/Catedral_Metropolitana_de_La_Paz.jpg');  /* Reemplaza con la URL de tu imagen */
+    background-size: cover;  /* Hace que la imagen cubra todo el div */
+    background-position: center;  /* Centra la imagen */
+    position: relative;
+    border-radius: 20px;
+  }
+  .sectionEvento .eventoDireccion .eventoInformacion .texto{
+    text-align: center;
+    position: relative; /* Asegura que el texto se mantenga visible y encima de la imagen */
+    z-index: 100; /* Eleva el texto por encima de los efectos aplicados al fondo */
+    padding: 10px 10px; /* Añade algo de padding para que el texto no toque los bordes */
+  }
+  .sectionEvento .eventoDireccion .eventoInformacion .texto .textoTitulo{
+    font-size: 2.5rem;
+    color: var(--colorSubtitulo);
+    font-weight: 900;
+  }
+  .sectionEvento .eventoDireccion .eventoInformacion .texto .textoDetalle{
+    font-size: 2rem;
+    color: var(--color-Button_texto);
+    font-weight: 500;
+    margin: 5px;
+    margin-bottom: 20px;
+  }
+  .eventoDireccion .eventoInformacion .texto .eventoBotones{
+    display: flex;
+    flex-direction: column;
+
+    width: 230px;
+height: 40px;
+background-color: var(--color-pallete-6);
+border: none;
+border-radius: 10px;
+color: var(--color-pallete-5);
+font-size: 1.6rem;
+cursor: pointer;
+transition: background-color 0.4s ease;
+  }
+  /* FIN seccion evento */
 
 
 
