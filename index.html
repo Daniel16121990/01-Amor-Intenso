@@ -12,7 +12,10 @@
     <!-- para usar animaciones con lottie creator -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-
+    <!-- librerias para el carrusel de imagenes -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <!-- fin de librerias de el carrusel de imagenes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -177,21 +180,90 @@
                 <div class="texto">
                     <p class="textoTitulo">Lugar</p>
                     <p class="textoDetalle">Iglesia Cuerpo de Cristo</p>
-                    <p class="textoTitulo">Lugar</p>
+                    <p class="textoTitulo">Dirección</p>
                     <p class="textoDetalle">Zona 16 de Julio, Calle Manolo #3</p>
                     <p class="textoTitulo">Día</p>
                     <p class="textoDetalle">Sábado 1 de Diciembre - 10hs</p>
                     <div class="eventoBotones">
                         <button class="botonGeneral" id="btn-agendar-iglesia">¿Cómo llegar?</button>
-                        <button class="botonGeneral" id="btn-agendar-iglesia">Agendar</button>
-
-                        
+                        <button class="botonGeneral" id="btn-agendar-iglesia">Agendar</button>   
                     </div>
                 </div>
             </div>
-
         </div>
      </section>
+<!-- seccion fiesta -->
+     <section class="sectionEvento">
+        <div class="eventoTitulo">
+            <p>Celebración</p>
+            <lottie-player class="gifs_lotties"
+                src="./assets/gifs/brindis_lottie_optimizada.json"
+                background="transparent"
+                speed="0.6"
+                style="width: 90px; height: 90px;"
+                loop
+                autoplay>
+            </lottie-player>
+        </div>
+        <div class="eventoDireccion">
+            <div class="imagen">
+            </div>
+            <div class="eventoInformacion eventoInformacionFiesta">
+                <div class="texto">
+                    <p class="textoTitulo">Lugar</p>
+                    <p class="textoDetalle">Salón de eventos Majestad</p>
+                    <p class="textoTitulo">Dirección</p>
+                    <p class="textoDetalle">Av. Bolivar #50 - La Paz</p>
+                    <p class="textoTitulo">Día</p>
+                    <p class="textoDetalle">Sábado 1 de Diciembre - 17hs</p>
+                    <div class="eventoBotones">
+                        <button class="botonGeneral" id="btn-agendar-iglesia">¿Cómo llegar?</button>
+                        <button class="botonGeneral" id="btn-agendar-iglesia">Agendar</button>   
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+     <!-- fin seccion fiesta -->
+
+     <!-- seccion carrusel de fotos -->
+     <section class="sectionCarrusel">
+        <div class="divCarruselTitulo">
+            <img src="./assets/iconos/viñeta1.svg" alt="">
+            <p class="tituloRetratos">Retratos de Nuestro Amor</p>
+            <p class="fraseCarrusel">Cada fotografía es un fragmento de nuestra historia, grabada en el corazón de la eternidad</p>
+            <lottie-player class="gifs_lotties"
+                        src="./assets/gifs/camara_lottie_optimizada.json"
+                        background="transparent"
+                        speed="0.5"
+                        style="width: 100px; height: 100px;"
+                        loop
+                        autoplay>
+                    </lottie-player>
+        </div>
+        <div class="carrusel">
+            <div><img src="./assets/fotos/pareja_portada.webp" alt="Imagen 1"></div>
+            <div><img src="./assets/fotos/pareja_portada.webp" alt="Imagen 2"></div>
+            <div><img src="./assets/fotos/pareja_portada.webp" alt="Imagen 3"></div>
+        </div>
+        <div>
+            <img src="./assets/bordes_modal_inicial/adorno_divisor.svg" alt="">
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script>
+             $(document).ready(function(){
+             $('.carrusel').slick({
+             autoplay: true,
+              autoplaySpeed: 3000,
+              arrows: true,
+              dots: true,
+             prevArrow: '<button type="button" class="slick-prev">Previous</button>',
+             nextArrow: '<button type="button" class="slick-next">Next</button>'
+                  });
+             });
+        </script>
+    </section>
    </main>
     <script src="./script.js"></script>
 </body>
