@@ -71,3 +71,43 @@ var fechaObjetivo = new Date('2024-12-21:10:00'); //año/mes/dia
 
     actualizarCuentaRegresiva(); // Llamar una vez para evitar el retraso inicial
 //**************fin cuenta regresiva***** *
+
+//funcion para el scroll de programacion
+function initializeSlider(slider) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('active');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return; // stop the function from running
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; //scroll-fast
+      slider.scrollLeft = scrollLeft - walk;
+  });
+}
+
+// Inicializa el slider en ambos divs
+const sliderProgramacion = document.querySelector('.div_programacion');
+const sliderBendicion = document.querySelector('.div_bendicion');
+
+initializeSlider(sliderProgramacion);
+initializeSlider(sliderBendicion);
+//fin funcion de scroll programacion

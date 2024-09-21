@@ -609,6 +609,180 @@
     }
   /* fin carrusel de fotos */
 
+  /* seccion programacion */
+  .section_programacion{
+    width: 100%;
+    margin: 50px auto;
+    background-color: var(--color-pallete-5);
+    box-shadow: 0px -5px 20px -8px rgba(0,0,0,0.75), /* sombreado superior */
+              0px 5px 10px -5px rgba(0,0,0,0.75); /* sombreado inferior */
+  }
+  .section_programacion .titulo_programacion{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .section_programacion .titulo_programacion p{
+    font-family: var(--fuente2);
+    color: var(--color-Titulo);
+    font-size: 4rem;
+    padding-top: 20px;
+    font-weight: 500;
+  }
+  .section_programacion .div_programacion{
+    display: flex;
+    overflow-x: auto;
+    user-select: none;
+  }
+  .section_programacion .div_programacion .item{
+  
+   display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 190px;
+      height: 145px; /* Ajusta esta altura según sea necesario */
+      text-align: center;
+      border-left: 1px solid var(--colorOscuro);
+      margin-right: 2px;
+      padding: 10px;
+      box-sizing: border-box;
+  }
+  .section_programacion .div_programacion .item img{
+    width: 50px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    pointer-events: none; /* Desactiva los eventos del mouse en la imagen */
+  }
+  .section_programacion .div_programacion .item .texto_programacion{
+    margin: 0;
+    color: var(--colorSubtitulo);
+    font-weight: 500;
+    font-family: var(--fuente1);
+    font-size: 1.5rem; /* Ajusta el tamaño del texto según sea necesario */
+  }
+  .section_programacion .div_programacion::-webkit-scrollbar{
+  width: 10%;
+  }
+  /* fin seccion programacion */
+
+  /* seccion escribenos */
+  .sectionEscribenos{
+    width: 100%;
+    height: auto;
+    
+    }
+    .sectionEscribenos .divEscribenos{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 40px 0;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .sectionEscribenos .divEscribenos .fraseEscribenos{
+    font-size: 4rem;
+    color: var(--color-Titulo);
+    font-family: var(--fuente2);
+    margin: 20px 0;
+    font-weight: 500;
+    }
+    .sectionEscribenos .divEscribenos .fraseEscribenos2{
+    font-size: 1.8rem;
+    font-family: var(--fuente1);
+    color: var(--color-Titulo);
+    }
+    .sectionEscribenos .divEscribenos .imgCarta{
+    width: 100px;
+    margin: 20px 0;
+    }
+    .sectionEscribenos .divEscribenos .btnEscribenos{
+    width: 230px;
+    height: 40px;
+    background-color: var(--color-Button_texto);
+    border: none;
+    border-radius: 50px;
+    color: var(--color-Blanco);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    }
+    
+    .sectionEscribenos .divEscribenos .btnEscribenos:hover{
+    background-color: var(--colorFondo);
+    border: 1px solid var(--colorOscuro);
+    }
+  /* fin seccion escribenos */
+
+  /* seccion final de iniciales */
+  .sectionInicialesFin{
+    width: 100%;
+    height: auto;
+    background-color: var(--colorOscuro);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px -5px 20px -8px rgba(0,0,0,0.75), /* sombreado superior */
+                0px 5px 10px -5px rgba(0,0,0,0.75); /* sombreado inferior */
+    }
+    
+    
+    .sectionInicialesFin .divFechaInicialesNombresFin{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+    }
+    .sectionInicialesFin .divFechaInicialesNombresFin p:nth-child(1){
+    padding: 10px 20px 10px 20px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    font-size: 10rem;
+    border-top: 1px solid var(--colorSubtitulo);
+    border-bottom: 1px solid var(--colorSubtitulo);
+    color: var(--color-Blanco);
+    font-family: var(--fuente2);
+    }
+    .sectionInicialesFin .divFechaInicialesNombresFin span{
+    font-family: var(--fuente1);
+    color: var(--color-Blanco);
+    font-size: 7rem;
+    margin: 0 10px;
+    }
+    .sectionInicialesFin .divFechaInicialesNombresFin p:nth-child(2){
+    font-size: 2.5rem;
+    font-family: var(--fuente1);
+    font-weight: 500;
+    color: var(--color-Blanco);
+    }
+
+    /* footer */
+    footer{
+
+      width: 100%;
+      
+      background-color: var(--color-Button_texto);
+      }
+      footer .divFooter{
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.6rem;
+      color: var(--color-Blanco);
+      font-family: var(--fuente1);
+      font-weight: 500;
+      }
+      footer .divFooter img{
+        width: 80px;
+      }
+
 
 
 
