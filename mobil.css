@@ -220,7 +220,7 @@
 }
 .rose-corner {
     position: absolute;
-    width: 120px; /* Ajusta el tamaño según sea necesario */
+    width: 75px; /* Ajusta el tamaño según sea necesario */
     height: 120px; /* Ajusta el tamaño según sea necesario */
     z-index: 500;
     background-size: contain;
@@ -230,14 +230,15 @@
 }
 
 .top-left {
-    top: -60px;
-    left: -30px;
+    top: -76px;
+    left: 0px;
+    background-image: url('./assets/bordes_modal_inicial/rosa_mitad_portada2.svg'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
 }
 
 .top-right {
-    top: -70px;
+    top: -50px;
     right: 0px;
-    background-image: url('./assets/fotos/flores_sinFondo.webp'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
+    background-image: url('./assets/bordes_modal_inicial/rosa_mitad_portada.svg'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
 }
 .contenedorTop .divfechaNombresFrase{
   width: 100%;
@@ -317,13 +318,13 @@
     position: relative;
   }
   .sectionContador .contadorCirculos .contadorReloj .rosaReloj{
-    top: -57px;
-    left: -39px;
-    background-image: url('./assets/fotos/flores_sinFondo.webp'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
+    top: -70px;
+    left: -52px;
+    background-image: url('./assets/bordes_modal_inicial/flor_contador.svg'); /* Reemplaza 'rosa.png' con la imagen de la rosa */
 
     position: absolute;
-    width: 120px; /* Ajusta el tamaño según sea necesario */
-    height: 120px; /* Ajusta el tamaño según sea necesario */
+    width: 220px; /* Ajusta el tamaño según sea necesario */
+    height: 220px; /* Ajusta el tamaño según sea necesario */
     background-size: contain;
     background-repeat: no-repeat;
     overflow-x: hidden;
@@ -779,8 +780,13 @@
       font-family: var(--fuente1);
       font-weight: 500;
       }
+      footer .divFooter p {
+        margin-top: 15px;
+        font-size: 1.9rem;
+      }
       footer .divFooter img{
-        width: 80px;
+        width: 103px;
+        margin-left: 10px;
       }
 
 
