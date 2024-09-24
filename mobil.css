@@ -408,6 +408,9 @@
     flex-direction: column;
     background-color: var(--color-pallete-5);
     user-select: none;
+
+    position: relative;
+    overflow: hidden;
   }
   .contenedorMain .section_bendicion .div_bendicion .item{
 
@@ -444,6 +447,21 @@
     font-family: var(--fuente1);
     font-size: 1.4rem; /* Ajusta el tamaño del texto según sea necesario */
   }
+
+
+  .animated-image {
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: right 1.5s ease-out;
+    max-width: 69px; /* Asegurarse de que la imagen se ajuste */
+    max-height: 110px;
+}
+
+.image-visible {
+    right: 0;
+}
   /* FIN SECCION PADRES MISMOS ESTILOS PARA SECCION PADRINOS*/
 
   /* seccion evento */

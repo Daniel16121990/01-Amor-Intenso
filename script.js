@@ -111,3 +111,40 @@ const sliderBendicion = document.querySelector('.div_bendicion');
 initializeSlider(sliderProgramacion);
 initializeSlider(sliderBendicion);
 //fin funcion de scroll programacion
+
+
+
+
+
+
+
+
+
+// script.js
+
+
+
+
+
+function checkVisibility() {
+  const triggerSections = document.querySelectorAll(".div_bendicion");
+
+  triggerSections.forEach(triggerSection => {
+      const animatedImage = triggerSection.querySelector(".animated-image");
+      const sectionPosition = triggerSection.getBoundingClientRect();
+
+      const isVisible =
+          sectionPosition.top < window.innerHeight &&
+          sectionPosition.bottom > 0 &&
+          sectionPosition.left < window.innerWidth &&
+          sectionPosition.right > 0;
+
+      if (isVisible) {
+          animatedImage.classList.add("image-visible");
+      } else {
+          animatedImage.classList.remove("image-visible");
+      }
+  });
+}
+
+document.addEventListener("scroll", checkVisibility);
