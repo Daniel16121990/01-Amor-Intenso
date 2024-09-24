@@ -133,21 +133,29 @@ function checkVisibility() {
       const animatedImage = triggerSection.querySelector(".animated-image");
       const sectionPosition = triggerSection.getBoundingClientRect();
 
+      // Calcular el medio de la sección
+      const sectionMiddle = sectionPosition.top + sectionPosition.height / 2;
+
+      // Verificar si el medio de la sección está en el centro de la ventana
       const isVisible =
-          sectionPosition.top < window.innerHeight &&
-          sectionPosition.bottom > 0 &&
-          sectionPosition.left < window.innerWidth &&
-          sectionPosition.right > 0;
+          sectionMiddle >= (window.innerHeight / 2 - animatedImage.clientHeight / 2) &&
+          sectionMiddle <= (window.innerHeight / 2 + animatedImage.clientHeight / 2);
+
+      // Verificar si la sección está fuera de la vista
+      const isOutOfView =
+          sectionPosition.bottom < 0 || sectionPosition.top > window.innerHeight;
 
       if (isVisible) {
           animatedImage.classList.add("image-visible");
-      } else {
+      } else if (isOutOfView) {
           animatedImage.classList.remove("image-visible");
       }
   });
 }
 
 document.addEventListener("scroll", checkVisibility);
+
+
 
 // fin imagenes laterales desplazamiento
 
