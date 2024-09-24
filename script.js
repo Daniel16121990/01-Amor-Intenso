@@ -6,8 +6,12 @@ window.onload = function() {
     abrirModal()
   };
 
+  
+
   function abrirModal() {
     document.getElementById('modalInicio').style.display = 'block';
+    document.getElementById('contenedorMain').style.display = 'block';
+    document.getElementById('footer').style.display = 'block';
     document.body.classList.add('body-sin-scroll'); // Deshabilitar el desplazamiento del cuerpo
 
   }
@@ -121,11 +125,7 @@ initializeSlider(sliderBendicion);
 
 
 // script.js
-
-
-
-
-
+// Imagenes laterales desplazamiento
 function checkVisibility() {
   const triggerSections = document.querySelectorAll(".div_bendicion");
 
@@ -148,3 +148,6 @@ function checkVisibility() {
 }
 
 document.addEventListener("scroll", checkVisibility);
+
+// fin imagenes laterales desplazamiento
+

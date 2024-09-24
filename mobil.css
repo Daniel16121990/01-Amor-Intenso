@@ -193,6 +193,7 @@
     width: 100%;
     height: auto;
     background-color: var(--color-pallete-6);
+    display: none;
   }
   .contenedorMain .sectionMainPortada{
     background-image: url('./assets/fotos/pareja_portada.webp'); /* Reemplaza 'tu-imagen.jpg' con el nombre de tu imagen */
@@ -781,7 +782,7 @@
 
     /* footer */
     footer{
-
+      display: none;
       width: 100%;
       
       background-color: var(--color-Button_texto);
