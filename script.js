@@ -28,15 +28,18 @@ window.onload = function() {
     document.getElementById('modalInicio').style.display = 'none';
     document.body.classList.remove('body-sin-scroll'); // Habilitar el desplazamiento del cuerpo
     cancion.play(); // Reproducir la canción
+    startPetals();
   }
 
   // Función para pausar/reproducir la canción
 function toggleReproducirPausar() {
   if (cancion.paused) {
     cancion.play(); // Si está pausada, reproducir la canción
+    startPetals();
     // document.getElementById('botonMusica').textContent = 'Pausar';
   } else {
     cancion.pause(); // Si se está reproduciendo, pausar la canción
+    stopPetals();
     // document.getElementById('botonMusica').textContent = 'Reproducir';
   }
 }
@@ -170,3 +173,44 @@ document.addEventListener("scroll", checkVisibility);
 
 // fin imagenes laterales desplazamiento
 
+//caida de petalos
+const contenedorMain = document.getElementById('contenedorMain');
+let animationId;
+const maxPetals = 20; // Máximo número de corazones en pantalla
+let currentPetals = 0;
+
+// Función para crear pétalos
+function createPetal() {
+  if (currentPetals >= maxPetals) return; // Limitar la cantidad de corazones
+  const petal = document.createElement('div');
+  petal.classList.add('petal');
+  petal.style.left = `${Math.random() * 100}%`;
+  petal.style.animationDuration = `${Math.random() * 4 + 3}s`; // Rango más largo
+  contenedorMain.appendChild(petal); // Insertar directamente en el main
+  currentPetals++;
+
+  petal.addEventListener('animationend', () => {
+      petal.remove();
+      currentPetals--; // Decrementar el contador al eliminar el corazón
+  });
+}
+
+// Función para iniciar la caída de pétalos
+function startPetals() {
+  if (animationId) return; // Si ya hay una animación en curso
+  animationId = setInterval(createPetal, 500); // Crear pétalos a intervalos
+}
+
+// Función para detener la caída de pétalos
+function stopPetals() {
+  clearInterval(animationId);
+  animationId = null;
+  
+  // Eliminar todos los pétalos existentes
+  while (contenedorMain.getElementsByClassName('petal').length) {
+      contenedorMain.removeChild(contenedorMain.getElementsByClassName('petal')[0]);
+  }
+  currentPetals = 0; // Reiniciar contador de pétalos
+}
+
+//fin caida de petalos
