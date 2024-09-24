@@ -655,7 +655,7 @@
   }
   .section_programacion .div_programacion .item .texto_programacion{
     margin: 0;
-    color: var(--colorSubtitulo);
+    color: var(--color-Titulo);
     font-weight: 500;
     font-family: var(--fuente1);
     font-size: 1.5rem; /* Ajusta el tamaño del texto según sea necesario */
