@@ -131,7 +131,7 @@
 
     }
     .boton-flotante img{
-      width: 35px;
+      width: 22px;
       z-index: 3;
     }
   /* boton musica fin */
@@ -824,7 +824,7 @@
       }
       footer .divFooter p {
         margin-top: 15px;
-        font-size: 1.9rem;
+        font-size: 1.7rem;
       }
       footer .divFooter img{
         width: 103px;
