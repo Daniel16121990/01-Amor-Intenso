@@ -143,6 +143,12 @@
     justify-content: center;
     align-items: center;
   }
+  .contenedorBienvenidos .pareja{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .contenedorBienvenidos .titulo{
     font-size: 2.1rem;
     color: var(--colorSubtitulo);
@@ -162,11 +168,19 @@
     padding: 0 40px;
     margin-top: 30px;
   }
+  .contenedor2Bienvenida .botones_bienvenida{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    margin-top: 30px;
+  }
   .contenedor2Bienvenida p{
     font-size: 1.6rem;
     color: var(--colorSubtitulo);
     font-weight: 500;
-    margin-bottom: 30px;
+
     text-align: center;
   }
   .contenedor2Bienvenida .btnIngresarConMusica{
@@ -479,8 +493,8 @@
     top: 50%;
     transform: translateY(-50%);
     transition: right 1.5s ease-out;
-    max-width: 69px; /* Asegurarse de que la imagen se ajuste */
-    max-height: 110px;
+    max-width: 71px; /* Asegurarse de que la imagen se ajuste */
+    max-height: 221px;
 }
 
 .image-visible {

@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel & Mayra</title>
     <link rel="stylesheet" href="./mobil.css">
+    <!-- Para computadora -->
+    <link rel="stylesheet" href="./desktop.css" media="screen and (min-width: 800px)">
     <!-- fuentes google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,14 +41,20 @@
             <!-- <span class="cerrar" onclick="cerrarModal()">&times;</span> -->
             <div class="contenedorBienvenidos">
                 <p class="titulo">Bienvenidos a la invitación de</p>
-                <P class="tituloNombres">Daniel</P>
-                <P class="tituloNombres">y</P>
-                <P class="tituloNombres">Mayra</P>
+                <div class="pareja">
+                    <P class="tituloNombres">Daniel</P>
+                    <P class="tituloNombres">y</P>
+                    <P class="tituloNombres">Mayra</P>
+                </div>
+                
             </div>
         <div class="contenedor2Bienvenida">
             <p>¿Quieres escuchar nuestra canción mientras recorres la invitación?</p>
-            <button class="btnIngresarConMusica" onclick="cerrarModalConMusica()">Ingresar con canción</button>
-            <button onclick="cerrarModal()">ingresar sin canción</button>
+            <div class="botones_bienvenida">
+                <button class="btnIngresarConMusica" onclick="cerrarModalConMusica()">Ingresar con canción</button>
+                <button onclick="cerrarModal()">ingresar sin canción</button>
+            </div>
+            
         </div>
         </div>
     </section>
@@ -130,7 +138,7 @@
                <p class="texto_bendicion">Pedro Ramirez Flores</p>
                 <p class="texto_bendicion">Laura Maldonado Ortíz</p>
             </div>
-            <img src="./assets/bordes_modal_inicial/rosa_mitad_portada.svg" alt="Imagen" class="animated-image">
+            <img src="./assets/bordes_modal_inicial/flor_mitad_largo_derecho2.svg" alt="Imagen" class="animated-image">
             <div class="item">
                 <p class="texto_bendicion_titulo">Padres de la novia</p>
                 <img src="./assets/fotos/padres-de-novia.webp" alt="">
@@ -153,7 +161,7 @@
                 <p class="texto_bendicion">Eduardo Estévez López</p>
                 <p class="texto_bendicion">Elena Salazar Jiménez</p>
             </div>
-            <img src="./assets/bordes_modal_inicial/rosa_mitad_portada.svg" alt="Imagen" class="animated-image">
+            <img src="./assets/bordes_modal_inicial/flor_mitad_largo_derecho.svg" alt="Imagen" class="animated-image">
             <div class="item">
                 <p class="texto_bendicion_titulo">Padrinos de torta</p>
                 <img src="./assets/fotos/padrinos_torta.webp" alt="">

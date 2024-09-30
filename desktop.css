@@ -1,0 +1,33 @@
+/* seccion de bienvenida */
+.contenedorBienvenidos .titulo{
+  font-size: 3.5rem;
+  color: var(--colorSubtitulo);
+  margin-bottom: 2rem;
+}
+.contenedorBienvenidos .pareja{
+  flex-direction: row;
+}
+.contenedorBienvenidos .pareja p{
+  margin: 0 10px;
+  font-size: 7rem;
+}
+.contenedor2Bienvenida p{
+  font-size: 2rem;
+}
+.contenedor2Bienvenida .botones_bienvenida{
+  flex-direction: row;
+}
+.contenedor2Bienvenida .btnIngresarConMusica{
+  margin-bottom: 0px;
+}
+.contenedor2Bienvenida .botones_bienvenida button{
+  margin: 0 10px;
+}
+.contenedorMain{
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  .modalContenidoInicio {
+    width: 100%; /* Ancho del 100% de la ventana */
+    height: 100vh; /* Alto del 100% de la ventana */
+  }
