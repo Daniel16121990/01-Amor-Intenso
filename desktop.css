@@ -23,11 +23,157 @@
 .contenedor2Bienvenida .botones_bienvenida button{
   margin: 0 10px;
 }
-.contenedorMain{
-    max-width: 50%;
-    margin: 0 auto;
-  }
+
   .modalContenidoInicio {
     width: 100%; /* Ancho del 100% de la ventana */
     height: 100vh; /* Alto del 100% de la ventana */
   }
+
+  /* seccion de toogle musica */
+  .boton-flotante {   
+    width: 50px;
+    height: 50px; 
+    top: 15px;
+    right: 15px;
+    }
+    .boton-flotante::before{
+      width: 90px;
+      height: 90px;
+    }
+    .boton-flotante::after{
+      width: 46px;
+      height: 46px;
+    }
+    .boton-flotante img{
+      width: 30px;
+      z-index: 3;
+    }
+
+    /* Cabeza */
+    .cabeza{
+      display: flex;
+    }
+    .contenedorMain .sectionMainPortada{
+      width: 50%;
+      height: 124vh;
+    }
+    .contenedorMain .contenedorTop{
+      width: 50%;
+      justify-content: center;
+    }
+
+    .contenedorTop .curvo {
+      height: 133%;
+      width: 887px;
+      top: -90px;
+      left: 0;
+      transform: rotate(270deg);
+      z-index: -1;
+  }
+
+  .top-left {
+    display: none;
+}
+
+.top-right {
+  left: 0;
+  justify-self: center;
+  background-image: url(./assets/bordes_modal_inicial/rosa_mitad_portada.svg);
+  transform: rotate(270deg);
+}
+.rose-corner {
+  position: absolute;
+  width: 143px;
+  height: 194px;
+  z-index: 451;
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+.contenedorTop .divfechaNombresFrase{
+  width: 100%;
+  padding-top: 130px;
+}
+
+.sectionContador .contadorCirculos {
+  top: 590px;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 10;
+}
+.sectionContador .contadorCirculos .contadorReloj .rosaReloj {
+  top: -85px;
+  left: -50px;
+  width: 280px;
+  height: 280px;
+}
+.sectionContador .contadorCirculos .contadorReloj p {
+  font-size: 5.5rem;
+}
+.sectionContador .reloj .reloj-col .number {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+.sectionContador svg.corazon {
+  width: 41px;
+  height: 41px;
+}
+.sectionContador {
+  height: 138px;
+}
+.contenedorMain .section_bendicion{
+  box-shadow: none;
+}
+.contenedorMain .section_bendicion .div_bendicion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.contenedorMain .section_bendicion .titulo_bendicion p{
+  font-size: 6rem;
+}
+.animated-image {
+  max-width: 76px;
+  max-height: 353px;
+}
+.contenedorMain .section_bendicion .div_bendicion .item .texto_bendicion_titulo {
+  font-size: 3.5rem;
+}
+.contenedorMain .section_bendicion .div_bendicion .item .texto_bendicion {
+  font-size: 2rem;
+}
+.contenedorMain .section_bendicion .div_bendicion .item img {
+  width: 160px;
+}
+.sectionEvento .eventoTitulo p {
+  font-size: 6rem;
+}
+
+/* seccion carrusel */
+.sectionCarrusel .divCarruselTitulo img{
+  width: 70%;
+  }
+  .divCarruselTitulo .tituloRetratos {
+    font-size: 6rem;
+}
+.divCarruselTitulo .fraseCarrusel {
+  font-size: 2.3rem;
+  font-family: var(--fuente1);
+  color: var(--color-Titulo);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+ .container {
+      max-width: 40%;
+  }
+
+
+
+
+
+
+
+
+

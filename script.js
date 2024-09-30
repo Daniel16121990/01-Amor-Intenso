@@ -214,3 +214,58 @@ function stopPetals() {
 }
 
 //fin caida de petalos
+
+//para galeria de fotos 2.0
+const gallery = document.getElementById('gallery');
+        const photos = gallery.getElementsByClassName('photo');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+        const playBtn = document.getElementById('play');
+        const pauseBtn = document.getElementById('pause');
+
+        let currentPhotoIndex = 0;
+        let intervalId = null;
+
+        function showPhoto(index) {
+            photos[currentPhotoIndex].classList.remove('active');
+            currentPhotoIndex = (index + photos.length) % photos.length;
+            photos[currentPhotoIndex].classList.add('active');
+        }
+
+        function nextPhoto() {
+            showPhoto(currentPhotoIndex + 1);
+        }
+
+        function prevPhoto() {
+            showPhoto(currentPhotoIndex - 1);
+        }
+
+        function startSlideshow() {
+            if (intervalId === null) {
+                intervalId = setInterval(nextPhoto, 3000);
+            }
+        }
+
+        function pauseSlideshow() {
+            if (intervalId !== null) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+        }
+
+        prevBtn.addEventListener('click', () => {
+            pauseSlideshow();
+            prevPhoto();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            pauseSlideshow();
+            nextPhoto();
+        });
+
+        playBtn.addEventListener('click', startSlideshow);
+        pauseBtn.addEventListener('click', pauseSlideshow);
+
+        // Start the slideshow automatically
+        startSlideshow();
+//fi n de galeria 2.0
