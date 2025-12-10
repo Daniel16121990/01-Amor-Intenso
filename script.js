@@ -60,7 +60,7 @@ window.addEventListener('scroll', function() {
 //***************fin parallax*************/
 
 //***************cuenta regresiva----------
-var fechaObjetivo = new Date('2024-12-21:10:00'); //año/mes/dia
+var fechaObjetivo = new Date('2025-12-23:10:00'); //año/mes/dia
 
     function actualizarCuentaRegresiva() {
         var ahora = new Date().getTime();

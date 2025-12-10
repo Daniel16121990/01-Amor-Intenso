@@ -63,7 +63,7 @@
     }
 
     .contenedorTop .curvo {
-      height: 133%;
+      height: 1050px;
       width: 887px;
       top: -90px;
       left: 0;
@@ -169,6 +169,24 @@
       max-width: 40%;
   }
 
+  .section_programacion{
+    margin-top: 150px;
+    margin-bottom: 150px;
+    max-width: 100%;
+  }
+  .section_programacion .titulo_programacion p {
+    font-size: 6rem;
+}
+.section_programacion .div_programacion .item {
+  min-width: 325px;
+  height: 229px;
+}
+.section_programacion .div_programacion .item img {
+  width: 90px;
+}
+.section_programacion .div_programacion .item .texto_programacion {
+  font-size: 2.3rem;
+}
 
 
 
